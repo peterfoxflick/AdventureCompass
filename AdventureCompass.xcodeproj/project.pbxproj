@@ -13,6 +13,7 @@
 		91D07F6E2454879400DED183 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91D07F6D2454879400DED183 /* Assets.xcassets */; };
 		91D07F712454879400DED183 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91D07F702454879400DED183 /* Preview Assets.xcassets */; };
 		91D07F742454879400DED183 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91D07F722454879400DED183 /* LaunchScreen.storyboard */; };
+		91D07F7C24548A2F00DED183 /* compass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D07F7B24548A2F00DED183 /* compass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		91D07F702454879400DED183 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		91D07F732454879400DED183 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91D07F752454879400DED183 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91D07F7B24548A2F00DED183 /* compass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = compass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +58,10 @@
 		91D07F662454878E00DED183 /* AdventureCompass */ = {
 			isa = PBXGroup;
 			children = (
+				91D07F7B24548A2F00DED183 /* compass.swift */,
+				91D07F6B2454878E00DED183 /* ContentView.swift */,
 				91D07F672454878E00DED183 /* AppDelegate.swift */,
 				91D07F692454878E00DED183 /* SceneDelegate.swift */,
-				91D07F6B2454878E00DED183 /* ContentView.swift */,
 				91D07F6D2454879400DED183 /* Assets.xcassets */,
 				91D07F722454879400DED183 /* LaunchScreen.storyboard */,
 				91D07F752454879400DED183 /* Info.plist */,
@@ -148,6 +151,7 @@
 			files = (
 				91D07F682454878E00DED183 /* AppDelegate.swift in Sources */,
 				91D07F6A2454878E00DED183 /* SceneDelegate.swift in Sources */,
+				91D07F7C24548A2F00DED183 /* compass.swift in Sources */,
 				91D07F6C2454878E00DED183 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

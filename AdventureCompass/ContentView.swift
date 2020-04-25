@@ -9,8 +9,37 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var compass = Compass()
+    
     var body: some View {
-        Text("Hello, World!")
+        HStack{
+            Button(action: {
+                self.compass.next()
+            }) {
+                // How the button looks like
+                if self.compass.getDirCount() > 1 {
+                    self.compass.getDir().getImage()
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 200)
+                        .overlay(
+                      Image(systemName: "\(self.compass.getDirCount()).circle")
+                      .resizable()
+                      .aspectRatio(contentMode: .fit)
+                      .foregroundColor(.red)
+                      .frame(height: 30)
+                        .transition(.opacity),
+                      alignment: .topTrailing
+                    )
+                } else {
+                    self.compass.getDir().getImage()
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 200)
+                        .transition(.opacity)
+                }
+            }
+        }
     }
 }
 
