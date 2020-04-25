@@ -14,10 +14,13 @@
 		91D07F712454879400DED183 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91D07F702454879400DED183 /* Preview Assets.xcassets */; };
 		91D07F742454879400DED183 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91D07F722454879400DED183 /* LaunchScreen.storyboard */; };
 		91D07F7C24548A2F00DED183 /* compass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D07F7B24548A2F00DED183 /* compass.swift */; };
+		91EF02B42454D4720037FEE5 /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EF02B32454D4720037FEE5 /* Quest.swift */; };
+		91EF02B62454D5FE0037FEE5 /* QuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EF02B52454D5FE0037FEE5 /* QuestView.swift */; };
+		91EF02B82454DAC80037FEE5 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EF02B72454DAC80037FEE5 /* HelpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		91D07F642454878E00DED183 /* AdventureCompass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdventureCompass.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91D07F642454878E00DED183 /* Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adventure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91D07F672454878E00DED183 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91D07F692454878E00DED183 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		91D07F6B2454878E00DED183 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,6 +29,9 @@
 		91D07F732454879400DED183 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91D07F752454879400DED183 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91D07F7B24548A2F00DED183 /* compass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = compass.swift; sourceTree = "<group>"; };
+		91EF02B32454D4720037FEE5 /* Quest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
+		91EF02B52454D5FE0037FEE5 /* QuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestView.swift; sourceTree = "<group>"; };
+		91EF02B72454DAC80037FEE5 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +56,7 @@
 		91D07F652454878E00DED183 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				91D07F642454878E00DED183 /* AdventureCompass.app */,
+				91D07F642454878E00DED183 /* Adventure.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,7 +65,10 @@
 			isa = PBXGroup;
 			children = (
 				91D07F7B24548A2F00DED183 /* compass.swift */,
+				91EF02B32454D4720037FEE5 /* Quest.swift */,
 				91D07F6B2454878E00DED183 /* ContentView.swift */,
+				91EF02B72454DAC80037FEE5 /* HelpView.swift */,
+				91EF02B52454D5FE0037FEE5 /* QuestView.swift */,
 				91D07F672454878E00DED183 /* AppDelegate.swift */,
 				91D07F692454878E00DED183 /* SceneDelegate.swift */,
 				91D07F6D2454879400DED183 /* Assets.xcassets */,
@@ -95,7 +104,7 @@
 			);
 			name = AdventureCompass;
 			productName = AdventureCompass;
-			productReference = 91D07F642454878E00DED183 /* AdventureCompass.app */;
+			productReference = 91D07F642454878E00DED183 /* Adventure.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -149,10 +158,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91EF02B42454D4720037FEE5 /* Quest.swift in Sources */,
 				91D07F682454878E00DED183 /* AppDelegate.swift in Sources */,
 				91D07F6A2454878E00DED183 /* SceneDelegate.swift in Sources */,
+				91EF02B82454DAC80037FEE5 /* HelpView.swift in Sources */,
 				91D07F7C24548A2F00DED183 /* compass.swift in Sources */,
 				91D07F6C2454878E00DED183 /* ContentView.swift in Sources */,
+				91EF02B62454D5FE0037FEE5 /* QuestView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +310,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = peterfoxflick.AdventureCompass;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Adventure;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -318,7 +330,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = peterfoxflick.AdventureCompass;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Adventure;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

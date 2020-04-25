@@ -10,10 +10,39 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var compass = Compass()
+    var quest = Quest()
+    @State var showingQuest = false
+    @State var showingHelp = false
+
     
     var body: some View {
-        HStack{
+        ZStack{
+            LinearGradient(gradient: Gradient(colors: [.green, .yellow]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                HStack {
+                    Spacer()
+                    Button(action:{
+                        self.showingHelp.toggle()
+                    }) {
+                        Image(systemName: "questionmark.circle")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height:40)
+                            .foregroundColor(.white)
+                            .padding()
+                    }.sheet(isPresented: $showingHelp){
+                        HelpView()
+                    }
+                }
+                Spacer()
+
+            }
+            
             Button(action: {
+                if self.compass.nextIsEnd() {
+                    self.showingQuest.toggle()
+                }
                 self.compass.next()
             }) {
                 // How the button looks like
@@ -22,6 +51,7 @@ struct ContentView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(height: 200)
+                        .foregroundColor(.white)
                         .overlay(
                       Image(systemName: "\(self.compass.getDirCount()).circle")
                       .resizable()
@@ -36,10 +66,14 @@ struct ContentView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(height: 200)
+                        .foregroundColor(.white)
                         .transition(.opacity)
                 }
+            }.sheet(isPresented: $showingQuest){
+                QuestView(quest: self.quest.getQuest())
             }
         }
+
     }
 }
 

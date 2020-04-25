@@ -50,6 +50,10 @@ class Compass: ObservableObject {
         }
         return o - index
     }
+    
+    public func nextIsEnd() -> Bool {
+        return self.index + 2 == self.direction.count
+    }
 
     private func generate(){
         self.direction.removeAll()
