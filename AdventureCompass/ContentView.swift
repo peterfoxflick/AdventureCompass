@@ -36,7 +36,6 @@ struct ContentView: View {
                     }
                 }
                 Spacer()
-
             }
             
             Button(action: {
@@ -45,6 +44,7 @@ struct ContentView: View {
                 }
                 self.compass.next()
             }) {
+                
                 // How the button looks like
                 if self.compass.getDirCount() > 1 {
                     self.compass.getDir().getImage()
@@ -69,6 +69,7 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         .transition(.opacity)
                 }
+                
             }.sheet(isPresented: $showingQuest){
                 QuestView(quest: self.quest.getQuest())
             }
